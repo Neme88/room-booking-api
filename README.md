@@ -144,8 +144,36 @@ API will be available at: `http://127.0.0.1:8000/api/room_bookings/`
 
 ## 🛠️ Testing the API
 ### **Run Unit Tests**
+## 🧪 Running Tests
+
+To ensure the API and database logic are working correctly, run the tests using:
+
+```bash
+
+python manage.py test bookings.tests
+
 ```bash
 $ python manage.py test
+```
+
+## Expected Test Output 
+
+If test is run correctly below is the expected output
+```bash
+
+Found 7 test(s).
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+
+⚠️ WARNING: booking_end is None. The database trigger may not be working correctly.
+🔧 Please check PostgreSQL triggers and ensure the function is applied.
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.395s
+
+OK
+Destroying test database for alias 'default'...
+
 ```
 
 ### **Run API Tests with cURL**
@@ -181,8 +209,12 @@ room-booking-api/
 │── .env               # Environment variables
 │── requirements.txt   # Dependencies
 │── README.md          # Documentation
-│── manage.py
-        # Django management script
+│── manage.py          # App management
+│── requirenments.txt  # Dependencies management
+│── .env.example       # .env.example
+│── .gitignore         # To Ignore file and folders so that git doesn't track them.
+│── LICENSE            # MIT License
+     # Django management script
 ```
 
 ---
@@ -199,6 +231,7 @@ This project follows a feature branch workflow to ensure clean and organized cod
   - `feature/add-room-booking-view`The views development branch
   - `feature/add-room-booking-routes`The URL routing development branch
   - `feature/add-room-booking-serializer`The serializer development branch
+  - `feature/add-tests The tests development branch
 - **`hotfix/*`**: For critical fixes that need to be applied directly to `main`.
 ``` 
 ```
