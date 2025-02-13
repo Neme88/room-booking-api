@@ -187,26 +187,6 @@ room-booking-api/
 
 ---
 
-## 🤝 Contributing
-If you'd like to contribute, please **fork the repository** and submit a **pull request**.
-
----
-
-## 📜 License
-This project is licensed under the **MIT License**.
-
----
-
-## 🚀 Author
-Developed by **Chinemerem** as part of a technical interview task at Bitcube.
-
----
-
-**Happy Coding! 🚀**
-
-
-
-
 ## Git Workflow
 
 This project follows a feature branch workflow to ensure clean and organized code management.
@@ -227,3 +207,21 @@ git checkout dev
 git checkout -b feature/room-booking-api
 # After development
 git push origin feature/room-booking-api
+
+
+## 🤝 Contributing
+If you'd like to contribute, please **fork the repository** and submit a **pull request**.
+
+---
+
+## 📜 License
+This project is licensed under the **MIT License**.
+
+---
+
+## 🚀 Author
+Developed by **Chinemerem** as part of a technical interview task at Bitcube.
+
+---
+
+**Happy Coding! 🚀**
