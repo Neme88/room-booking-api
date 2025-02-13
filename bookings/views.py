@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .models import RoomBooking
+from .serializers import RoomBookingSerializer
 
-# Create your views here.
+class RoomBookingViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows CRUD operations on RoomBooking.
+    """
+    queryset = RoomBooking.objects.all()
+    serializer_class = RoomBookingSerializer
+
