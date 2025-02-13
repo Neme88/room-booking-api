@@ -9,3 +9,7 @@ class RoomBookingViewSet(viewsets.ModelViewSet):
     queryset = RoomBooking.objects.all()
     serializer_class = RoomBookingSerializer
 
+    def perform_create(self, serializer):
+        """ Ensure booking_end is fetched after saving """
+        instance = serializer.save()  # Save booking
+        instance.refresh_from_db()  # Refresh to get computed booking_end
