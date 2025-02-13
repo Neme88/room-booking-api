@@ -19,7 +19,8 @@ $ python -m venv venv
 # Activate virtual environment
 # For Linux/macOS:
 $ source venv/bin/activate
-
+```
+```bash
 # For Windows:
 $ venv\Scripts\activate
 ```
@@ -33,13 +34,13 @@ $ pip install -r requirements.txt
 Create a `.env` file in the project's root directory and add the following:
 ```env
 SECRET_KEY='your-secret-key'
-DB_NAME=bookingapidb
-DB_USER=adminuser
-DB_PASSWORD=yourpassword
-DB_HOST=localhost
+DB_NAME='your-db name'
+DB_USER='your-db user'
+DB_PASSWORD='your_db password'
+DB_HOST='localhost'
 DB_PORT=5432
 DEBUG=True
-ALLOWED_HOSTS=localhost,127.0.0.1
+ALLOWED_HOSTS='localhost,127.0.0.1'
 ```
 
 ### **5️⃣ Run Database Migrations**
@@ -143,21 +144,18 @@ API will be available at: `http://127.0.0.1:8000/api/room_bookings/`
 ---
 
 ## 🛠️ Testing the API
-### **Run Unit Tests**
-## 🧪 Running Tests
-
+### 🧪**Run Unit Tests**
+  
 To ensure the API and database logic are working correctly, run the tests using:
 
 ```bash
 
 python manage.py test bookings.tests
-
-```bash
+```
 
 ## Expected Test Output 
 
 If test is run correctly below is the expected output
-```bash
 
 Found 7 test(s).
 Creating test database for alias 'default'...
@@ -172,7 +170,7 @@ Ran 7 tests in 0.395s
 OK
 Destroying test database for alias 'default'...
 
-```
+
 
 ### **Run API Tests with cURL**
 ```bash
@@ -214,10 +212,10 @@ room-booking-api/
 │── LICENSE            # MIT License
 ```
 ---
-```bash
-```
-## Git Workflow
 
+
+## Git Workflow
+```bash
 This project follows a feature branch workflow to ensure clean and organized code management.
 
 - **`main`**: The production-ready code. Only stable, tested code should be merged here.
@@ -230,7 +228,7 @@ This project follows a feature branch workflow to ensure clean and organized cod
   - `feature/add-tests The tests development branch
 - **`hotfix/*`**: For critical fixes that need to be applied directly to `main`.
 ``` 
-```
+
 ### Branching Example:
 ```bash
 git checkout dev
@@ -240,8 +238,9 @@ git checkout -b feature/room-booking-api
 git push origin feature/room-booking-api
 ```
 
-```bash
+
 ## 🤝 Contributing
+
 If you'd like to contribute, please **fork the repository** and submit a **pull request**.
 
 ---
@@ -255,4 +254,3 @@ Developed by **Chinemerem** as part of a technical interview task at Bitcube.
 
 
 **Happy Coding! 🚀**
-```
