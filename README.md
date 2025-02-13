@@ -153,8 +153,6 @@ To ensure the API and database logic are working correctly, run the tests using:
 python manage.py test bookings.tests
 
 ```bash
-$ python manage.py test
-```
 
 ## Expected Test Output 
 
@@ -214,9 +212,7 @@ room-booking-api/
 │── .env.example       # .env.example
 │── .gitignore         # To Ignore file and folders so that git doesn't track them.
 │── LICENSE            # MIT License
-     # Django management script
 ```
-
 ---
 ```bash
 ```
