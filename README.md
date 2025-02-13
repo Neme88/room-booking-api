@@ -186,7 +186,8 @@ room-booking-api/
 ```
 
 ---
-
+```bash
+```
 ## Git Workflow
 
 This project follows a feature branch workflow to ensure clean and organized code management.
@@ -199,7 +200,8 @@ This project follows a feature branch workflow to ensure clean and organized cod
   - `feature/add-room-booking-routes`The URL routing development branch
   - `feature/add-room-booking-serializer`The serializer development branch
 - **`hotfix/*`**: For critical fixes that need to be applied directly to `main`.
-
+``` 
+```
 ### Branching Example:
 ```bash
 git checkout dev
@@ -207,7 +209,8 @@ git checkout dev
 git checkout -b feature/room-booking-api
 # After development
 git push origin feature/room-booking-api
-
+```
+---
 
 ## 🤝 Contributing
 If you'd like to contribute, please **fork the repository** and submit a **pull request**.
