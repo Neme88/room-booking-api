@@ -24,4 +24,3 @@ class RoomBookingModelTest(TestCase):
             print("🔧 Please check PostgreSQL triggers and ensure the function is applied.")
         else:
             self.assertEqual(booking.booking_end, expected_end_time)
-

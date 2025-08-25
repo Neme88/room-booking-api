@@ -1,15 +1,22 @@
+ # bookings/views.py
 from rest_framework import viewsets
-from .models import RoomBooking
-from .serializers import RoomBookingSerializer
+from rest_framework.permissions import IsAuthenticated
+from .models import Booking
+from .serializers import BookingSerializer
+from .permissions import IsOwnerOrAdmin
 
-class RoomBookingViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows CRUD operations on RoomBooking.
-    """
-    queryset = RoomBooking.objects.all()
-    serializer_class = RoomBookingSerializer
+class BookingViewSet(viewsets.ModelViewSet):
+    serializer_class = BookingSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        qs = Booking.objects.select_related("room", "user")
+        return qs if self.request.user.is_staff else qs.filter(user=self.request.user)
+
+    def get_permissions(self):
+        if self.action in ["retrieve", "update", "partial_update", "destroy"]:
+            return [IsOwnerOrAdmin()]
+        return super().get_permissions()
 
     def perform_create(self, serializer):
-        """ Ensure booking_end is fetched after saving """
-        instance = serializer.save()  # Save booking
-        instance.refresh_from_db()  # Refresh to get computed booking_end
+        serializer.save(user=self.request.user)
